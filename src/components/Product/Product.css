@@ -8,7 +8,6 @@
 .product img{
     height: 286px;
     width: 286px;
-    border: 1px solid #95A0A7;
     border-radius: 8px;
     margin: 7px;
 }
@@ -34,7 +33,16 @@
     border-radius: 0px 0px 8px 8px;
     position: absolute;
     bottom: 0px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-cart .btn-text{
+    margin-right: 5px;
+}
+.btn-text{
+    font-family: 'Lato';
+    font-size: 15px;
 }
 .btn-cart:hover{
     background-color: orange;
