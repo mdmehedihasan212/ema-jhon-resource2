@@ -8,3 +8,7 @@
     grid-gap: 45px;
     margin: 100px 50px;
 }
+.order-summary{
+    background-color: rgba(255, 153, 0, 0.3);
+    align-items: center;
+}
