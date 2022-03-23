@@ -4,14 +4,15 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Product.css';
 
 const Product = ({ product, handleAddToCart }) => {
-    // console.log(product);
-    const { name, img, price, ratings, seller } = product;
+    console.log(product);
+    const { name, img, price, ratings, seller, shipping } = product;
     return (
         <div className='product'>
             <img src={img} alt="" />
             <div className="product-info">
                 <p className='product-name'>{name}</p>
                 <p className='product-price'>Price: ${price}</p>
+                <p>Shipping Price: ${shipping}</p>
                 <p>Manufacturer : {seller}</p>
                 <p>Rating : {ratings} star</p>
             </div>

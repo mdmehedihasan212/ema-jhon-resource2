@@ -24,6 +24,9 @@
     line-height: 25px;
     margin-top: 7px;
 }
+.product-price{
+    font-size: 17px;
+}
 .btn-cart{
     width: 100%;
     background: #FFE0B3;
