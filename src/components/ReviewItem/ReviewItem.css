@@ -14,4 +14,21 @@
 }
 .review-details-container{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.review-item .delete-container{
+    display: flex;
+    align-items: center;
+}
+.delete-button{
+    background-color: rgba(235, 87, 87, 0.3);
+    border: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.delete-icon{
+    color: rgba(235, 87, 87, 1);
+    font-size: 27px;
 }
