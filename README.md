@@ -4,7 +4,9 @@ This is very important and useful project in web development learning course. It
 
 # Important Notes
 1. What is react router?
-=> 
+=> React route in the standard routing library for react.
+   It's a simple API but powerful feature like lazy code loading,
+   dynamic route matching and location transition handling built right in.
 2. How works react router?
 => 
 3. Why should/benefit use react router?
@@ -16,4 +18,4 @@ This project github link (https://github.com/mdmehedihasan212/ema-jhon-resource2
 
 # Live Site Link (Netlify)
 
-This site deploy netlify and it's link (https://ema-jhon-resource2.netlify.app/shop)
+This site deploy netlify and it's link (https://ema-jhon-resource2.netlify.app/)
