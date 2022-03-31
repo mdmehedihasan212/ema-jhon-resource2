@@ -1,13 +1,16 @@
 import React from 'react';
+import './Order.css';
 import useCart from '../../hooks/useCart';
 import useProduct from '../../hooks/useProduct';
 import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
+import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
     const [products, setProducts] = useProduct();
     const [cart, setCart] = useCart(products)
+    const navigate = useNavigate();
     // console.log(cart);
 
     const removeProduct = (product) => {
@@ -30,7 +33,9 @@ const Order = () => {
                 <Cart
                     key={cart.id}
                     cart={cart}
-                ></Cart>
+                >
+                    <button onClick={() => navigate('/shop')}>Go Shop Page</button>
+                </Cart>
             </div>
         </div>
     );
