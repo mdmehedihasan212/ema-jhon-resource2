@@ -15,7 +15,39 @@
     margin-top: 38px;
 }
 
+.input-group input {
+    width: 415px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
 .input-group label {
     display: block;
+    height: 20px;
     margin-left: 5px;
+    margin-bottom: 9px;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-size: 25px;
+    width: 415px;
+    height: 55px;
+    margin-top: 44px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+}
+
+.form-link {
+    text-decoration: none;
+    margin-top: 9px;
 }
