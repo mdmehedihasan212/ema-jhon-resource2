@@ -2,9 +2,16 @@
     height: 700px;
     width: 500px;
     margin: 0 auto;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     border: 1px solid rgba(149, 160, 167, 1);
     border-radius: 8px;
     box-shadow: 12px 12px 2px 1px rgba(255, 224, 179, 1);
+}
+
+.error-text {
+    text-align: center;
+    color: red;
+    margin: 0px;
 }

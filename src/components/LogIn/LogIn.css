@@ -2,6 +2,7 @@
     width: 500px;
     height: 600px;
     margin: 0 auto;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     border: 1px solid rgba(149, 160, 167, 1);
@@ -22,6 +23,7 @@
     border: 1px solid #95A0A7;
     border-radius: 5px;
     font-size: 20px;
+    padding: 0px 10px;
 }
 
 .input-group {
@@ -33,6 +35,11 @@
     height: 20px;
     margin-left: 5px;
     margin-bottom: 9px;
+}
+
+.form-text {
+    margin-top: 8px;
+    text-align: center;
 }
 
 .submit-btn {
@@ -70,7 +77,7 @@
     font-size: 17px;
     width: 415px;
     height: 55px;
-    margin-top: 30px;
+    margin-top: 80px;
     border-radius: 5px;
     border: 1px solid #95A0A7;
     background-color: white;

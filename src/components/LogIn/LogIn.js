@@ -18,7 +18,7 @@ const LogIn = () => {
                         <input type="password" name="password" required />
                     </div>
                     <input className='submit-btn' type="submit" value="Login" />
-                    <p>New to Ema-john? <Link className='form-link' to={'/signup'}>Create New Account
+                    <p className='form-text'>New to Ema-john? <Link className='form-link' to={'/signup'}>Create New Account
                     </Link></p>
                     <div className="google-login">
 
