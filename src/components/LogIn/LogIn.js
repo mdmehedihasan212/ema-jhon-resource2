@@ -5,17 +5,17 @@ import './LogIn.css';
 
 const LogIn = () => {
     return (
-        <div className='form-container'>
+        <div className='login-form-container'>
             <div>
                 <h1 className='form-title'>Login</h1>
                 <form>
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
-                        <input type="email" name="Email" />
+                        <input type="email" name="Email" required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="password" />
+                        <input type="password" name="password" required />
                     </div>
                     <input className='submit-btn' type="submit" value="Login" />
                     <p>New to Ema-john? <Link className='form-link' to={'/signup'}>Create New Account

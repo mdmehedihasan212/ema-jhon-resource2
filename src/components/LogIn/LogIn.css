@@ -1,18 +1,19 @@
-.form-container {
+.login-form-container {
     width: 500px;
     height: 600px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     border: 1px solid rgba(149, 160, 167, 1);
-    box-sizing: border-box;
     border-radius: 8px;
+    box-shadow: 12px 12px 2px 1px rgba(255, 224, 179, 1);
 }
 
 .form-title {
     font-size: 35px;
     font-weight: 400;
     margin-top: 38px;
+    text-align: center;
 }
 
 .input-group input {
@@ -20,7 +21,7 @@
     height: 55px;
     border: 1px solid #95A0A7;
     border-radius: 5px;
-
+    font-size: 20px;
 }
 
 .input-group {
@@ -44,11 +45,17 @@
     margin-top: 44px;
     background: rgba(255, 153, 0, 0.3);
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 153, 0, 0.5);
 }
 
 .form-link {
     text-decoration: none;
     margin-top: 9px;
+    color: #FF9900;
 }
 
 .google-login {
@@ -67,6 +74,7 @@
     border-radius: 5px;
     border: 1px solid #95A0A7;
     background-color: white;
+    cursor: pointer;
 }
 
 .google-icon {
