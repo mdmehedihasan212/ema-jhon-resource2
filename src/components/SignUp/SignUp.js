@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 import './SignUp.css';
 import { sendEmailVerification } from 'firebase/auth';
@@ -30,7 +30,7 @@ const SignUp = () => {
     }
 
     if (user) {
-        navigate('/inventory')
+        navigate('/login')
     }
 
     const handleSubmitReload = event => {
@@ -61,7 +61,7 @@ const SignUp = () => {
         <div className='signup-form-container'>
             <div>
                 <h1 className='form-title'>Sign Up</h1>
-                <form onSubmit={handleSubmitReload}>
+                <form className='form-container' onSubmit={handleSubmitReload}>
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
                         <input onBlur={handleEmailBlur} type="email" name="Email" required />
