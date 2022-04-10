@@ -8,4 +8,12 @@
  * npm install --save react-firebase-hooks.
  * go down and click Authentication hooks.
  * useCreateUserWithEmailAndPassword(auth); for new register user.
+ * 
+ * 
+ * 
+ * npm install -g firebase-tools
+ * firebase login
+ * firebase init
+ * npm run build
+ * firebase deploy
  */
