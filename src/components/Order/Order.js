@@ -34,7 +34,7 @@ const Order = () => {
                     key={cart.id}
                     cart={cart}
                 >
-                    <button onClick={() => navigate('/inventory')}>Go Shipping</button>
+                    <button onClick={() => navigate('/shipping')}>Go Shipping</button>
                 </Cart>
             </div>
         </div>
