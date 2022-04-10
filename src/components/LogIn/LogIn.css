@@ -19,7 +19,6 @@
     width: 415px;
     height: 55px;
     border: 1px solid #95A0A7;
-    box-sizing: border-box;
     border-radius: 5px;
 
 }
@@ -50,4 +49,28 @@
 .form-link {
     text-decoration: none;
     margin-top: 9px;
+}
+
+.google-login {
+    width: 415px;
+    height: 55px;
+}
+
+.google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    width: 415px;
+    height: 55px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid #95A0A7;
+    background-color: white;
+}
+
+.google-icon {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
 }

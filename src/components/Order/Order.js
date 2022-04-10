@@ -8,7 +8,7 @@ import ReviewItem from '../ReviewItem/ReviewItem';
 import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
-    const [products, setProducts] = useProduct();
+    const [products] = useProduct();
     const [cart, setCart] = useCart(products)
     const navigate = useNavigate();
     // console.log(cart);

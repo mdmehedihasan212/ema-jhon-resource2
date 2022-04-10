@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
 import './LogIn.css';
 
 const LogIn = () => {
@@ -19,6 +20,14 @@ const LogIn = () => {
                     <input className='submit-btn' type="submit" value="Login" />
                     <p>New to Ema-john? <Link className='form-link' to={'/signup'}>Create New Account
                     </Link></p>
+                    <div className="google-login">
+
+                        {/* <input type="submit" value="Continue with Google" /> */}
+                        <button className='google-btn'>
+                            <FcGoogle className='google-icon'></FcGoogle>
+                            <p>Continue with Google</p>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
