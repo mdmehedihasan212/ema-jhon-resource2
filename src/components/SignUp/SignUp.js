@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 import './SignUp.css';
+import { sendEmailVerification } from 'firebase/auth';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -23,6 +24,7 @@ const SignUp = () => {
     const handlePasswordBlur = event => {
         setPassword(event.target.value)
     }
+
     const handleConfirmPasswordBlur = event => {
         setConfirmPassword(event.target.value)
     }
@@ -35,6 +37,7 @@ const SignUp = () => {
         event.preventDefault();
         if (password !== confirmPassword) {
             setError("Your password don't match")
+            console.log('did not match');
             return;
         }
         if (password.length < 6) {
@@ -44,6 +47,7 @@ const SignUp = () => {
 
         createUserWithEmailAndPassword(email, password)
             .then(result => {
+                sendEmailVerification(auth.currentUser)
                 const user = result?.user;
                 console.log(user);
             })
@@ -70,14 +74,12 @@ const SignUp = () => {
                         <label htmlFor="confirm-password">Confirm Password</label>
                         <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" required />
                     </div>
+                    <p className='error-text'>{error}</p>
                     <input className='submit-btn' type="submit" value="Sign Up" />
                     <p className='form-text'>Already have an account? <Link className='form-link' to={'/login'}>Login
                     </Link></p>
-                    <p className='error-text'>{error}</p>
-                    <div className="google-login">
-
-                        {/* <input type="submit" value="Continue with Google" /> */}
-                        <button className='google-btn'>
+                    <div className="signup-div">
+                        <button className='signup-btn'>
                             <FcGoogle className='google-icon'></FcGoogle>
                             <p>Continue with Google</p>
                         </button>
