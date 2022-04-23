@@ -8,6 +8,20 @@ import './Shop.css';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/productCount')
+            .then(res => res.json())
+            .then(data => {
+                const count = data.count;
+                const page = Math.ceil(count / 10);
+                setPageCount(page);
+            })
+    }, [])
+
+
     useEffect(() => {
         // console.log('loaded local storage first0');
         fetch('http://localhost:5000/product')
@@ -57,6 +71,15 @@ const Shop = () => {
                 {
                     products.map(product => <Product key={product._id} product={product} handleAddToCart={handleAddToCart}></Product>)
                 }
+                <div className='pagination'>
+                    {
+                        [...Array(pageCount).keys()]
+                            .map(number => <button
+                                className={page === number ? 'selected' : ' '}
+                                onClick={() => setPage(number)}
+                            >{number}</button>)
+                    }
+                </div>
             </div>
             <div className="order-summary">
                 <Cart cart={cart}>

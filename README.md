@@ -1,6 +1,6 @@
 # Project Details
 
-This is very important and useful project in web development learning course. It is ema john e-commerce site build. Daily something new learning and update this site. Today (3/31/22) install react router in this site and explore it. Create custom hooks and use for duplicate useState and useEffect. FontAwesome icon use this project and no framework use it's site style. Dynamic cart component into add deferent button with link. Add useNavigate hook into order component button. Today (4/9/22) create firebase account and install npm. design login form create login component. Second time icon for use react icon.
+This is very important and useful project in web development learning course. It is ema john e-commerce site build. Daily something new learning and update this site. Today (3/31/22) install react router in this site and explore it. Create custom hooks and use for duplicate useState and useEffect. FontAwesome icon use this project and no framework use it's site style. Dynamic cart component into add deferent button with link. Add useNavigate hook into order component button. Today (4/9/22) create firebase account and install npm. design login form create login component. Second time icon for use react icon. Today (4/23/22) use own custom api from backend.
 
 # Important Notes
 1. What is react router?
@@ -11,6 +11,7 @@ This is very important and useful project in web development learning course. It
 => 
 3. Why should/benefit use react router?
 => 
+4. 
 
 # Github Link
 
