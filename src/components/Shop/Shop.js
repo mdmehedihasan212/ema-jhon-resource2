@@ -10,7 +10,7 @@ const Shop = () => {
     const [cart, setCart] = useState([]);
     useEffect(() => {
         // console.log('loaded local storage first0');
-        fetch('products.json')
+        fetch('http://localhost:5000/product')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -23,7 +23,7 @@ const Shop = () => {
         const storedCart = getStoredCart();
         const saveCart = [];
         for (const id in storedCart) {
-            const addedProduct = products.find(product => product.id === id)
+            const addedProduct = products.find(product => product._id === id)
             if (addedProduct) {
                 const quantity = storedCart[id];
                 addedProduct.quantity = quantity;
@@ -37,25 +37,25 @@ const Shop = () => {
 
     const handleAddToCart = setProduct => {
         let newCart = [];
-        const exist = cart.find(product => product.id === setProduct.id);
+        const exist = cart.find(product => product._id === setProduct._id);
         if (!exist) {
             setProduct.quantity = 1;
             newCart = [...cart, setProduct];
         }
         else {
-            const rest = cart.filter(product => product.id !== setProduct.id);
+            const rest = cart.filter(product => product._id !== setProduct._id);
             exist.quantity = exist.quantity + 1;
             newCart = [...rest, exist];
         }
         setCart(newCart);
-        addToDb(setProduct.id)
+        addToDb(setProduct._id)
     }
 
     return (
         <div className='shop-container'>
             <div className="product-container">
                 {
-                    products.map(product => <Product key={product.id} product={product} handleAddToCart={handleAddToCart}></Product>)
+                    products.map(product => <Product key={product._id} product={product} handleAddToCart={handleAddToCart}></Product>)
                 }
             </div>
             <div className="order-summary">
