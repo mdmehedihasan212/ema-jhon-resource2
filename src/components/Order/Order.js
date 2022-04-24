@@ -1,15 +1,13 @@
 import React from 'react';
 import './Order.css';
 import useCart from '../../hooks/useCart';
-import useProduct from '../../hooks/useProduct';
 import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
-    const [products] = useProduct();
-    const [cart, setCart] = useCart(products)
+    const [cart, setCart] = useCart()
     const navigate = useNavigate();
     // console.log(cart);
 
